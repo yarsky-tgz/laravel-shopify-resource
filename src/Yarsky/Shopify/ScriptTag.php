@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Shopify;
+namespace Yarsky\Shopify;
 
 class ScriptTag extends Resource
 {

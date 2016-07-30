@@ -6,7 +6,7 @@
  * Time: 16:57
  */
 
-namespace App\Shopify;
+namespace Yarsky\Shopify;
 
 use Sh;
 

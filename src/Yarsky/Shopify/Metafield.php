@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Shopify;
+namespace Yarsky\Shopify;
 
 class Metafield extends Resource
 {

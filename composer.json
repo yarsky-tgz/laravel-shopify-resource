@@ -1,0 +1,22 @@
+{
+    "name": "yarsky-tgz/laravel-shopify-resource",
+    "description": "Package for Laravel providing high level ORM/Resource like abstraction level for Shopify API",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Yarsky\\": "src/Yarsky"
+        }
+    },
+    "require": {
+        "laravel/framework": "5.2.*",
+        "rocket-code/shopify": "^2.0"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yaroslav Dobzhanskij",
+            "email": "merlyn.tgz@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable"
+}

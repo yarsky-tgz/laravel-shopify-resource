@@ -9,15 +9,17 @@ class ShopifyDomain
 
     public function handle($request, Closure $next, $guard = null)
     {
-        if ((!$request->has('shop') || !$request->has('hmac')) && !$request->session()->exists('shopify_domain')) {
+        $setCookie = false;
+
+        if ((!$request->has('shop') || !$request->has('hmac')) && !$request->hasCookie('shopify_domain')) {
             return $next($request);
         }
 
         if (!$request->has('shop')) {
-            $domain = session('shopify_domain');
+            $domain = $request->cookie('shopify_domain');
         } else {
             $domain = $request->input('shop');
-            session(['shopify_domain' => $domain]);
+            $setCookie = true;
         }
 
         $setup['SHOP_DOMAIN'] = $domain;
@@ -29,7 +31,14 @@ class ShopifyDomain
 
         Sh::setup($setup);
 
-        return $next($request);
+        if ($setCookie) {
+            $response = $next($request);
+            $response->withCookie(cookie()->forever('shopify_domain', $domain));
+            return $response;
+        } else {
+            return $next($request);
+        }
+
     }
 
 }

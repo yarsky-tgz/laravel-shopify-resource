@@ -28,7 +28,7 @@ class ShopifyDomain
         if ($token) {
             $setup['ACCESS_TOKEN'] = $token->token;
         }
-        
+
         Sh::setup($setup);
 
         if ($setCookie) {

@@ -107,7 +107,7 @@ class Resource
 
     protected function _getCreateUrl()
     {
-        return static::RESOURCE_NAME_MULT . '/' . $this->_id . '.json';
+        return static::RESOURCE_NAME_MULT . '.json';
     }
 
 }

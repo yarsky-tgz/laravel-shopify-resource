@@ -11,7 +11,7 @@ class ShopifyDomain
     {
         $setCookie = false;
 
-        if ((!$request->has('shop') || !$request->has('hmac')) && !$request->hasCookie('shopify_domain')) {
+        if (!$request->has('shop') && !$request->hasCookie('shopify_domain')) {
             return $next($request);
         }
 

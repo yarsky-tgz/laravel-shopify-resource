@@ -42,11 +42,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ShopifyDomain.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ShopifyDomain.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Yarsky/Shopify/Middleware/ShopifyDomain.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.615385">
-              <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.6963277">
+              <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -65,7 +65,7 @@
       <file leaf-file-name="Sh.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Yarsky/Shopify/Facades/Sh.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -75,7 +75,7 @@
       <file leaf-file-name="ShopifyServiceProvider.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Yarsky/Shopify/Providers/ShopifyServiceProvider.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-5.6538463">
               <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
               <folding />
             </state>
@@ -102,10 +102,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Resource.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Resource.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Yarsky/Shopify/Resource.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9759887">
+            <state vertical-scroll-proportion="-54.03846">
               <caret line="104" column="42" selection-start-line="104" selection-start-column="42" selection-end-line="104" selection-end-column="42" />
               <folding />
             </state>
@@ -144,9 +144,9 @@
         <option value="$PROJECT_DIR$/src/Yarsky/Shopify/Product.php" />
         <option value="$PROJECT_DIR$/src/Yarsky/Shopify/Metafield.php" />
         <option value="$PROJECT_DIR$/src/Yarsky/Shopify/ScriptTag.php" />
-        <option value="$PROJECT_DIR$/src/Yarsky/Shopify/Middleware/ShopifyDomain.php" />
         <option value="$PROJECT_DIR$/src/Yarsky/Shopify/CarrierService.php" />
         <option value="$PROJECT_DIR$/src/Yarsky/Shopify/Resource.php" />
+        <option value="$PROJECT_DIR$/src/Yarsky/Shopify/Middleware/ShopifyDomain.php" />
       </list>
     </option>
   </component>
@@ -484,14 +484,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Yarsky/Shopify/Facades/Sh.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Yarsky/Shopify/Product.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -500,9 +492,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Yarsky/Shopify/Providers/ShopifyServiceProvider.php">
+    <entry file="file://$PROJECT_DIR$/src/Yarsky/Shopify/Resource.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-54.03846">
+          <caret line="104" column="42" selection-start-line="104" selection-start-column="42" selection-end-line="104" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Yarsky/Shopify/CarrierService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8846154">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Yarsky/Shopify/Facades/Sh.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Yarsky/Shopify/Providers/ShopifyServiceProvider.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.6538463">
           <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
           <folding />
         </state>
@@ -518,24 +534,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Yarsky/Shopify/Middleware/ShopifyDomain.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.615385">
-          <caret line="31" column="32" selection-start-line="31" selection-start-column="32" selection-end-line="31" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Yarsky/Shopify/CarrierService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8846154">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Yarsky/Shopify/Resource.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9759887">
-          <caret line="104" column="42" selection-start-line="104" selection-start-column="42" selection-end-line="104" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.6963277">
+          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
           <folding />
         </state>
       </provider>

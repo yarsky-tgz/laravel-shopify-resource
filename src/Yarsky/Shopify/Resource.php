@@ -100,6 +100,11 @@ class Resource
 
     }
 
+    public function toArray()
+    {
+        return (array) $this->_attributes;
+    }
+
     protected function _getCreateUrl()
     {
         return static::RESOURCE_NAME_MULT . '/' . $this->_id . '.json';

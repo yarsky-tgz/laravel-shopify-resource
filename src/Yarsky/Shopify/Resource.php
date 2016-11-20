@@ -114,6 +114,7 @@ class Resource
 
     public static function call($options)
     {
+        $options['ALLDATA'] = true;
         $requestsCount = Redis::get('shopify:req:count');
         if ($requestsCount >= 39) {
             sleep(2);

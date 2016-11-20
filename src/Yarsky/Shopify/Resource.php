@@ -4,6 +4,7 @@ namespace Yarsky\Shopify;
 
 use Sh;
 use Debugbar;
+use Redis;
 
 class Resource
 {

@@ -3,6 +3,7 @@
 namespace Yarsky\Shopify;
 
 use Sh;
+use Debugbar;
 
 class Resource
 {
@@ -41,7 +42,7 @@ class Resource
 
     public static function find($options = array())
     {
-        $results =  Sh::call([
+        $results =  $this->_call([
             'METHOD' => 'GET',
             'URL' =>  static::RESOURCE_NAME_MULT . '.json',
             'DATA' => $options
@@ -54,7 +55,7 @@ class Resource
 
     public static function one($id, $options = array())
     {
-        $results =  Sh::call([
+        $results =  $this->_call([
             'METHOD' => 'GET',
             'URL' =>  static::RESOURCE_NAME_MULT . '/' . $id . '.json',
             'DATA' => $options
@@ -90,7 +91,7 @@ class Resource
             $options['URL'] = $this->_getCreateUrl();
         }
 
-        $result = Sh::call($options);
+        $result = $this->_call($options);
         $this->init($result->{static::RESOURCE_NAME});
         return $this;
     }
@@ -108,6 +109,17 @@ class Resource
     protected function _getCreateUrl()
     {
         return static::RESOURCE_NAME_MULT . '.json';
+    }
+
+    protected function _call($options)
+    {
+        $requestsCount = Redis::get('shopify:req:count');
+        if ($requestsCount >= 39) {
+            sleep(2);
+        }
+        $result = Sh::call($options);
+        Debugbar::info($result);
+        return $result;
     }
 
 }

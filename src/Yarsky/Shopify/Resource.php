@@ -111,7 +111,7 @@ class Resource
         return static::RESOURCE_NAME_MULT . '.json';
     }
 
-    public function call($options)
+    public static function call($options)
     {
         $requestsCount = Redis::get('shopify:req:count');
         if ($requestsCount >= 39) {

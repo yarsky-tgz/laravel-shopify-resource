@@ -42,7 +42,7 @@ class Resource
 
     public static function find($options = array())
     {
-        $results =  $this->_call([
+        $results =  self::call([
             'METHOD' => 'GET',
             'URL' =>  static::RESOURCE_NAME_MULT . '.json',
             'DATA' => $options
@@ -55,7 +55,7 @@ class Resource
 
     public static function one($id, $options = array())
     {
-        $results =  $this->_call([
+        $results =  self::call([
             'METHOD' => 'GET',
             'URL' =>  static::RESOURCE_NAME_MULT . '/' . $id . '.json',
             'DATA' => $options
@@ -91,7 +91,7 @@ class Resource
             $options['URL'] = $this->_getCreateUrl();
         }
 
-        $result = $this->_call($options);
+        $result = self::call($options);
         $this->init($result->{static::RESOURCE_NAME});
         return $this;
     }
@@ -111,7 +111,7 @@ class Resource
         return static::RESOURCE_NAME_MULT . '.json';
     }
 
-    protected function _call($options)
+    public function call($options)
     {
         $requestsCount = Redis::get('shopify:req:count');
         if ($requestsCount >= 39) {

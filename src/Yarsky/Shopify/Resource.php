@@ -121,7 +121,7 @@ class Resource
         }
         $result = Sh::call($options);
         $tmpSplit = explode('/', $result->_INFO['HTTP_X_SHOPIFY_SHOP_API_CALL_LIMIT']);
-        $counter = $tmpSplit;
+        $counter = $tmpSplit[0];
         Redis::set('shopify:req:count', $counter);
         Debugbar::info($counter);
         return $result;

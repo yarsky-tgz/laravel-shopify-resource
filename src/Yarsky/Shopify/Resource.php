@@ -120,7 +120,10 @@ class Resource
             sleep(2);
         }
         $result = Sh::call($options);
-        Debugbar::info($result);
+        $tmpSplit = explode('/', $result->_INFO['HTTP_X_SHOPIFY_SHOP_API_CALL_LIMIT']);
+        $counter = $tmpSplit;
+        Redis::set('shopify:req:count', $counter);
+        Debugbar::info($counter);
         return $result;
     }
 

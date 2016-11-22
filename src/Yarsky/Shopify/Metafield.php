@@ -4,7 +4,6 @@ namespace Yarsky\Shopify;
 
 class Metafield extends Resource
 {
-
     protected $_parent = null;
 
     const RESOURCE_NAME_MULT = 'metafields';

@@ -86,7 +86,7 @@ class Resource
 
         if ($this->_id) {
             $options['METHOD'] = 'PUT';
-            $options['URL'] = static::RESOURCE_NAME_MULT . '/' . $this->_id . '.json';
+            $options['URL'] = $this->_getItemUrl();
         } else {
             $options['METHOD'] = 'POST';
             $options['URL'] = $this->_getCreateUrl();
@@ -99,7 +99,10 @@ class Resource
 
     public function delete()
     {
-
+        return self::call([
+          'METHOD' => 'DELETE',
+          'URL' => $this->_getItemUrl();
+        ]);
     }
 
     public function toArray()
@@ -110,6 +113,11 @@ class Resource
     protected function _getCreateUrl()
     {
         return static::RESOURCE_NAME_MULT . '.json';
+    }
+
+    protected function _getItemUrl()
+    {
+        return static::RESOURCE_NAME_MULT . '/' . $this->_id . '.json';
     }
 
     public static function call($options)
@@ -123,7 +131,6 @@ class Resource
         $tmpSplit = explode('/', $result->_INFO['HTTP_X_SHOPIFY_SHOP_API_CALL_LIMIT']);
         $counter = $tmpSplit[0];
         Redis::set('shopify:req:count', $counter);
-        Debugbar::info($counter);
         return $result;
     }
 

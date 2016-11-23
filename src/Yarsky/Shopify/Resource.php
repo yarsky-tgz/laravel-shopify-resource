@@ -101,7 +101,7 @@ class Resource
     {
         return self::call([
           'METHOD' => 'DELETE',
-          'URL' => $this->_getItemUrl();
+          'URL' => $this->_getItemUrl()
         ]);
     }
 

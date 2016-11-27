@@ -1,6 +1,6 @@
 <?php
 
-namespace Yarsky\Shopify\Trait;
+namespace Yarsky/Shopify/Trait;
 
 trait Searchable
 {

@@ -2,8 +2,6 @@
 
 namespace Yarsky/Shopify;
 
-use Sh;
-
 class Customer extends Resource
 {
     use Trait/Searchable;

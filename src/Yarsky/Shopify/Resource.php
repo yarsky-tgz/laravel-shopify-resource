@@ -78,6 +78,15 @@ class Resource
         return collect($resources);
     }
 
+    public static function count($options = array())
+    {
+        $results = self::call([
+            'METHOD' => 'GET',
+            'URL' => static::RESOURCE_NAME_MULT . '/count.json',
+            'DATA' => $options
+        ]);
+    }
+
     public function save()
     {
         $options = [

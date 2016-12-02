@@ -1,10 +1,10 @@
 <?php
 
-namespace Yarsky/Shopify;
+namespace Yarsky\Shopify;
 
 class Customer extends Resource
 {
-    use Trait/Searchable;
+    use Trait\Searchable;
     const RESOURCE_NAME_MULT = 'customers';
     const RESOURCE_NAME = 'customer';
 

@@ -4,9 +4,21 @@ namespace Yarsky\Shopify;
 
 class Customer extends Resource
 {
-    use Trait\Searchable;
     const RESOURCE_NAME_MULT = 'customers';
     const RESOURCE_NAME = 'customer';
+
+    public static function search($options = array())
+    {
+        $results =  static::call([
+            'METHOD' => 'GET',
+            'URL' => static::RESOURCE_NAME_MULT . '/search.json',
+            'DATA' => $options
+        ]);
+
+        $data = $results->{static::RESOURCE_NAME_MULT};
+
+        return static::collect($data);
+    }
 
     public static function exists($email)
     {

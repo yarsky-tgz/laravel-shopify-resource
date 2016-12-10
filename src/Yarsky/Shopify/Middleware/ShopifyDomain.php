@@ -3,6 +3,7 @@ namespace Yarsky\Shopify\Middleware;
 
 use Closure;
 use Sh;
+use Yarsky\Shopify\Model\Token;
 
 class ShopifyDomain
 {
@@ -23,10 +24,11 @@ class ShopifyDomain
         }
 
         $setup['SHOP_DOMAIN'] = $domain;
-        $token = \App\Token::where('domain', $domain)->first();
+        $token = Token::where('domain', $domain)->first();
 
         if ($token) {
             $setup['ACCESS_TOKEN'] = $token->token;
+            Token::setCurrent($token);
         }
 
         Sh::setup($setup);

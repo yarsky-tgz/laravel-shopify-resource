@@ -10,6 +10,6 @@ class TokenScope implements Scope
 {
     public function apply(Builder $builder, Model $model)
     {
-        $builder->where('token', Token::current()->id);
+        $builder->where('token_id', Token::current()->id);
     }
 }

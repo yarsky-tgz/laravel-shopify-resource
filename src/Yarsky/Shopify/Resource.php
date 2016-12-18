@@ -31,6 +31,12 @@ class Resource
         return $this->_attributes->{$name};
     }
 
+    public function fresh()
+    {
+        $this->_id = null;
+        return $this;
+    }
+
     public function init($attributes)
     {
         if (!$attributes) {
@@ -85,6 +91,14 @@ class Resource
             'URL' => static::RESOURCE_NAME_MULT . '/count.json',
             'DATA' => $options
         ]);
+    }
+
+
+    public function map($item, $map)
+    {
+        foreach ($map as $alias => $name) {
+            $this->{$alias} = $item[$name];
+        }
     }
 
     public function save()

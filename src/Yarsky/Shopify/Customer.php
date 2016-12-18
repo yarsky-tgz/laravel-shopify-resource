@@ -20,6 +20,21 @@ class Customer extends Resource
         return static::collect($data);
     }
 
+    public static function getByEmail($email)
+    {
+        $customers = static::search([
+            'query' => 'email:' . $email,
+            'fields' => 'id',
+            'limit' => 1
+        ]);
+
+        if ($customers->count()) {
+            return $customers[0];
+        } else {
+            return false;
+        }
+    }
+
     public static function exists($email)
     {
         $customers = static::search([

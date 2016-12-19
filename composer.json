@@ -7,9 +7,15 @@
             "Yarsky\\": "src/Yarsky"
         }
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/yarsky-tgz/laravel-shopify-API-wrapper"
+        }
+    ],
     "require": {
         "laravel/framework": "^5.0",
-        "rocket-code/shopify": "^2.0"
+        "rocket-code/shopify": "dev-master"
     },
     "license": "MIT",
     "authors": [

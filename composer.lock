@@ -993,12 +993,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/yarsky-tgz/laravel-shopify-API-wrapper.git",
-                "reference": "aa1db1628b2470844e2feedf643e00ff740fd6e5"
+                "reference": "3828c7dc0892fa85191bb56679a6404fee90a7fb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yarsky-tgz/laravel-shopify-API-wrapper/zipball/aa1db1628b2470844e2feedf643e00ff740fd6e5",
-                "reference": "aa1db1628b2470844e2feedf643e00ff740fd6e5",
+                "url": "https://api.github.com/repos/yarsky-tgz/laravel-shopify-API-wrapper/zipball/3828c7dc0892fa85191bb56679a6404fee90a7fb",
+                "reference": "3828c7dc0892fa85191bb56679a6404fee90a7fb",
                 "shasum": ""
             },
             "require": {
@@ -1019,7 +1019,7 @@
             "support": {
                 "source": "https://github.com/yarsky-tgz/laravel-shopify-API-wrapper/tree/master"
             },
-            "time": "2016-12-19 05:28:40"
+            "time": "2016-12-19 05:46:15"
         },
         {
             "name": "swiftmailer/swiftmailer",

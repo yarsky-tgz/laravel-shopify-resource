@@ -15,6 +15,7 @@ class ShopifyServiceProvider extends ServiceProvider
         $configPath = __DIR__ . '/../../../../config/shopify.php';
         $this->publishes([$configPath => config_path('shopify.php')], 'config');
         $this->loadMigrationsFrom(__DIR__ . '/../../../../migrations');
+        $this->loadRoutesFrom(__DIR__ . '/../routes/install.php');
     }
 
     /**

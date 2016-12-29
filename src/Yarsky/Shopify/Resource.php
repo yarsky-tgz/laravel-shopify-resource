@@ -117,11 +117,6 @@ class Resource
         }
 
         $result = self::call($options);
-
-        if (!isset($result->{static::RESOURCE_NAME})) {
-            throw new ShopifyException($result);
-        }
-
         $this->init($result->{static::RESOURCE_NAME});
         return $this;
     }
